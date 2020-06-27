@@ -16,7 +16,8 @@ class _HomeState extends State<Home> {
       padding: const EdgeInsets.symmetric(vertical: 128),
       child: SwipeStack(
         children: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((int index) {
-          return SwiperItem(builder: (SwiperPosition position, double progress) {
+          return SwiperItem(
+              builder: (SwiperPosition position, double progress) {
             return CardWidget(text: index.toString());
           });
         }).toList(),
@@ -34,15 +35,10 @@ class _HomeState extends State<Home> {
   }
 
   Widget _button() {
-<<<<<<< HEAD
-    return RaisedButton(
+    return FloatingActionButton(
       onPressed: () {
         fetch_forismatic();
       },
-=======
-    return FloatingActionButton(
-      onPressed: () {},
->>>>>>> f27ec300e24ee1af896d61cb25130a3877551766
       child: Text("click me"),
     );
   }
