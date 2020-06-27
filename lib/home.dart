@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Quote/part1.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -8,6 +9,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  @override
+  void initState() {
+    super.initState();
+    fetch_forismatic();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
