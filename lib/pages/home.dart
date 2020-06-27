@@ -21,7 +21,6 @@ class _HomeState extends State<Home> {
       stackFrom: StackFrom.Top,
       translationInterval: 20,
       scaleInterval: 0.04,
-      
       onEnd: () => debugPrint("onEnd"),
       onSwipe: (int index, SwiperPosition position) =>
           debugPrint("onSwipe $index $position"),
@@ -30,8 +29,23 @@ class _HomeState extends State<Home> {
     );
   }
 
+  Widget _button() {
+    return RaisedButton(
+      onPressed: () {},
+      child: Text("click me"),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: _cards()));
+    return Scaffold(
+      body: SafeArea(
+          child: Column(
+        children: [
+          _button(),
+          _cards(),
+        ],
+      )),
+    );
   }
 }

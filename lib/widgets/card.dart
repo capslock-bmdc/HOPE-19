@@ -10,15 +10,15 @@ class CardWidget extends StatelessWidget {
     return Material(
         elevation: 4,
         borderRadius: BorderRadius.all(Radius.circular(6)),
-        child: Container(
-          width: 300,
-          height: 300,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(6)),
+        child: Center(
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(Radius.circular(6)),
+            ),
+            child: Text("Item $text",
+                style: TextStyle(color: Colors.black, fontSize: 20)),
           ),
-          child: Text("Item $text",
-              style: TextStyle(color: Colors.black, fontSize: 20)),
         ));
   }
 }
