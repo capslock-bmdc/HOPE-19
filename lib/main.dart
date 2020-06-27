@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hope19/home.dart';
+import 'package:hope19/pages/home.dart';
 
 void main() {
   runApp(MyApp());
