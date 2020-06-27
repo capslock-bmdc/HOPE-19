@@ -12,12 +12,16 @@ class Quate {
 }
 
 String proper(String quate) {
-  String result;
+  String result = "";
   quate = quate.toLowerCase();
   for (int a = 0; a < quate.length; a++) {
+    if (quate.substring(a, a + 1).codeUnitAt(0) == 60) {
+      a = quate.substring(a).indexOf('>');
+    }
     if ((quate.substring(a, a + 1).codeUnitAt(0) > 96 &&
             quate.substring(a, a + 1).codeUnitAt(0) < 123) ||
         quate.substring(a, a + 1).codeUnitAt(0) == 32 ||
+        quate.substring(a, a + 1).codeUnitAt(0) == 8217 ||
         quate.substring(a, a + 1).codeUnitAt(0) == 39)
       result = result + quate.substring(a, a + 1);
   }
@@ -33,7 +37,7 @@ fetch_forismatic() async {
     edit = proper(edit);
     print(map1[0]['title']['rendered']);
     print(edit);
-    print(edit.codeUnitAt(1));
+    print(edit.codeUnitAt(53));
   } else
     print(2);
 }
