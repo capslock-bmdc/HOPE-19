@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hope19/Quote/part1.dart';
 import 'package:hope19/widgets/card.dart';
 import 'package:swipe_stack/swipe_stack.dart';
 
@@ -31,7 +32,9 @@ class _HomeState extends State<Home> {
 
   Widget _button() {
     return RaisedButton(
-      onPressed: () {},
+      onPressed: () {
+        fetch_forismatic();
+      },
       child: Text("click me"),
     );
   }
