@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hope19/pages/home.dart';
+import 'package:hope19/util/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,10 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+        theme: themeUtil.getTheme(context),
         home: Home());
   }
 }

@@ -10,12 +10,12 @@ class CardWidget extends StatelessWidget {
     return Material(
         elevation: 4,
         borderRadius: BorderRadius.all(Radius.circular(6)),
-        child: Center(
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color(0xff2d384d),
               borderRadius: BorderRadius.all(Radius.circular(6)),
             ),
+        child: Center(
             child: Text("Item $text",
                 style: TextStyle(color: Colors.black, fontSize: 20)),
           ),
